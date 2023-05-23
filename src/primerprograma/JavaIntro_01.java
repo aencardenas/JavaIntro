@@ -25,8 +25,8 @@ public class JavaIntro_01 {
         System.out.println(number);
         System.out.println(Char);
         */
-
-        int firstNumber;
+    /*
+    int firstNumber;
         int secondNumber;
 
         System.out.println("Type two integer numbers: ");
@@ -77,6 +77,7 @@ public class JavaIntro_01 {
         System.out.println("Escribe una nota: ");
         nota = input.nextInt();
 
+        //Ejercicio 8
         while (nota < 0 || nota > 10){
 
             System.out.println("La nota es incorrecta, intentelo de nuevo");
@@ -85,6 +86,114 @@ public class JavaIntro_01 {
         }
 
         System.out.println("Nota correcta");
+    */
+
+
+        //Ejercicio 9
+
+        boolean logic = true;
+        int suma = 0;
+        int numero = 0;
+        int cont = 0;
+
+        /*do {
+            System.out.println("Escribe un numero: ");
+            numero = input.nextInt();
+
+            if (numero<0){
+
+
+            }else if (numero == 0){
+                System.out.println("Se capturo el numero 0");
+                break;
+            }else{
+                suma = suma + numero;
+            }
+
+            cont++;
+
+            if (cont == 20){
+                logic = false;
+            }
+
+        } while(logic);
+
+        System.out.println("La suma de los numeros es: " + suma);*/
+
+        /*int x = 0;
+        int counter = 4;
+
+
+        System.out.println("Escriba 4 numeros: ");
+        while(counter > 0){
+
+            x = input.nextInt();
+
+            System.out.print(x + " ");
+            for (int i = 0; i < x; i++) {
+                System.out.print("*");
+            }
+            System.out.println("\n");
+
+            counter--;
+
+
+       }*/
+
+        String frase;
+        String newPhrase;
+
+        System.out.println("Escriba una frase: ");
+        frase = input.nextLine();
+
+        newPhrase = encriptar(frase);
+
+        System.out.println(newPhrase);
 
     }
+
+    public static String encriptar(String frase){
+        char word;
+        String fraseNueva = "";
+
+        for (int i = 0; i < frase.length(); i++) {
+
+            word = frase.charAt(i);
+            switch (word){
+
+                case 'A', 'a':
+                    fraseNueva = fraseNueva.concat("@");
+                    break;
+
+                case 'E', 'e':
+                    fraseNueva = fraseNueva.concat("#");
+                    break;
+
+                case 'I', 'i':
+                    fraseNueva = fraseNueva.concat("$");
+                    break;
+
+                case 'O','o':
+                    fraseNueva = fraseNueva.concat("%");
+                    break;
+
+
+
+                case 'U','u':
+                    fraseNueva = fraseNueva.concat("*");
+                    break;
+
+                default:
+                    fraseNueva = fraseNueva.concat(Character.toString(word));
+
+
+            }
+
+        }
+
+        return fraseNueva;
+    }
+
 }
+
+
