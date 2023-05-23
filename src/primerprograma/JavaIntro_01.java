@@ -140,7 +140,7 @@ public class JavaIntro_01 {
 
        }*/
 
-        String frase;
+       /* String frase;
         String newPhrase;
 
         System.out.println("Escriba una frase: ");
@@ -148,11 +148,24 @@ public class JavaIntro_01 {
 
         newPhrase = encriptar(frase);
 
-        System.out.println(newPhrase);
+        System.out.println(newPhrase);*/
+
+        String[] equipo = new String[5];
+
+        System.out.println("Escribe el nombre de los 5 integrantes");
+        for (int i = 0; i <= 4; i++) {
+            equipo[i] = input.nextLine();
+
+        }
+
+        for (int x = 0; x <=  4 ; x++) {
+            System.out.println(equipo[x]);
+        }
+
 
     }
 
-    public static String encriptar(String frase){
+   /* public static String encriptar(String frase){
         char word;
         String fraseNueva = "";
 
@@ -192,7 +205,11 @@ public class JavaIntro_01 {
         }
 
         return fraseNueva;
-    }
+    }*/
+
+
+
+
 
 }
 
